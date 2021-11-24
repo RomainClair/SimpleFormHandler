@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Récupération d'informations quelconques</h1>
+    <form method="post">
+        <p>
+            <label for="text">Du texte</label>
+            <input type="text" name="text" id="text">
+        </p>
+        <p>
+            <label for="integer">Un entier</label>
+            <input type="number" name="integer" id="integer">
+        </p>
+        <p>
+            <label for="date">Une date</label>
+            <input type="date" name="date" id="date">
+        </p>
+        <p>
+            <label for="url">Une URL</label>
+            <input type="url" name="url" id="url">
+        </p>
+        <p>
+            <label for="choice">Votre choix</label>
+            <select name="choice" id="choice">
+                <option value="Yes">Oui</option>
+                <option value="No">Non</option>
+                <option value="Maybe">Peut-être</option>
+            </select>
+        </p>
+        <p>
+            <h2>Oui ou non ?</h2>
+            <label for="red">Rouge ?</label>
+            <input type="checkbox" name="red" id="red">
+            <label for="yellow">Jaune ?</label>
+            <input type="checkbox" name="yellow" id="yellow">
+            <label for="green">Vert ?</label>
+            <input type="checkbox" name="green" id="green">
+        </p>
+        <p>
+            <label for="range">Un interval</label>
+            <input type="range" name="range" id="range">
+        </p>
+        <p>
+            <input type="submit" value="Valider">
+        </p>
+    </form>
+{% endblock %}
