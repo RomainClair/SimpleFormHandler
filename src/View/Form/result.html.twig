@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Vous avez choisi : </h1>
+    <dl>
+        <dt>Votre texte</dt>
+        <dd>{{ text }}</dd>
+        <dt>Votre entier</dt>
+        <dd>{{ integer }}</dd>
+        <dt>Votre choix</dt>
+        <dd>{{ choice }}</dd>
+        <dt>Vos couleurs : </dt>
+        {% if wasRedChosen %}
+            <dd>Rouge</dd>
+        {% endif %}
+        {% if wasYellowChosen %}
+            <dd>Jaune</dd>
+        {% endif %}
+        {% if wasGreenChosen %}
+            <dd>Vert</dd>
+        {% endif %}
+    </dl>
+{% endblock %}

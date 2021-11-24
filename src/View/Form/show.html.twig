@@ -4,14 +4,23 @@
     <h1>Récupération d'informations quelconques</h1>
     <form method="post">
         <p>
+            {% for error in form.getError("text") %}
+                <p>{{ error }}</p>
+            {% endfor %}
             <label for="text">Du texte</label>
             <input type="text" name="text" id="text">
         </p>
         <p>
+            {% for error in form.getError("integer") %}
+                <p>{{ error }}</p>
+            {% endfor %}
             <label for="integer">Un entier</label>
             <input type="number" name="integer" id="integer">
         </p>
         <p>
+            {% for error in form.getError("date") %}
+                <p>{{ error }}</p>
+            {% endfor %}
             <label for="date">Une date</label>
             <input type="date" name="date" id="date">
         </p>
@@ -20,6 +29,9 @@
             <input type="url" name="url" id="url">
         </p>
         <p>
+            {% for error in form.getError("choice") %}
+                <p>{{ error }}</p>
+            {% endfor %}
             <label for="choice">Votre choix</label>
             <select name="choice" id="choice">
                 <option value="Yes">Oui</option>
